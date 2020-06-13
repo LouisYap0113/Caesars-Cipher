@@ -6,12 +6,18 @@ function rot13(str) {
 //using map() on each element to get final arr
     let finalarr = strarr.map(element=>{
         if (/[A-Z]/.test(element))
-            {}//To decipher the encoded alphabet
+            //if the element is alphabet, devipher it
+            {
+                if (element.charCodeAt() <= 77) //for A-M
+                    {return String.fromCharCode(element.charCodeAt() + 13);}
+
+                else {return String.fromCharCode(element.charCodeAt() - 13);} //for N-Z
+            }
+            //
+
         else {return element;} //if the element is non-alphabet, pass it on
-
-
     });
-
+//
 
 
 
