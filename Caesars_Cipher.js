@@ -6,7 +6,7 @@ function rot13(str) {
 //using map() on each element to get final arr
     let finalarr = strarr.map(element=>{
         if (/[A-Z]/.test(element))
-            //if the element is alphabet, devipher it
+            //if the element is alphabet, decipher it
             {
                 if (element.charCodeAt() <= 77) //for A-M
                     {return String.fromCharCode(element.charCodeAt() + 13);}
@@ -19,16 +19,5 @@ function rot13(str) {
     });
 //
 
-
-
-
-
-
-
-
-
-    return str;
+    return finalarr.join(""); //make the decoded element string again. all done.
   }
-  
-  rot13("SERR PBQR PNZC");
-  
